@@ -10,7 +10,7 @@ allowed_chars = string.digits + string.ascii_letters + string.punctuation + ' '
 def random_str(size):
     return ''.join(random.choices(allowed_chars, k=size))
 
-def crack_length(user, max_len=32, verbose=False) -> int:
+def crack_length(user, max_len=12, verbose=False) -> int:
     trials = 2000
     times = np.empty(max_len)
     for i in range(max_len):
